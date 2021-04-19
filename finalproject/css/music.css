@@ -1,0 +1,118 @@
+section{
+    padding: 2%;
+}
+
+h1, h2{
+    font-size: 4vw;
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+h3{
+    font-size: 3vw;
+}
+
+
+legend{
+    font-size: 20px;
+}
+
+label{
+    text-align: left;
+    width: 150px;
+    float: left;
+    padding-right:  10px;
+    font-size: 15px;
+}
+
+fieldset{
+    min-width: 300px;
+    padding: 2%;
+    margin: 10px;
+    border: 3px double #F1E09E;
+    background-color: #B0A19B75;
+}
+
+
+.addinfo{  
+    width: 175px;
+}
+
+.title{ grid-area: T; }
+.area1{ grid-area: A1; }
+.area2{ grid-area:A2; }
+.content{ grid-area:C; }
+.edits{ grid-area:E; }
+.form{ grid-area:F; }
+.contact{ grid-area:FO; }
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'T'
+			'A1'
+			'C'
+            'E'
+			'F'
+            'A2'
+            'FO';
+		grid-gap:0px;
+		padding:4px;
+	} 
+    .move{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }          
+ 
+    header{
+        text-align: center;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width:481px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'T T T'
+			'A1 A1 C'
+			'E E A2'
+            'E E F'
+            'FO FO F';
+		grid-gap:0px;
+		padding:5px;
+	}
+    .move{
+        float:right;
+        max-width:300px;
+        padding-right:10%;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+	.grid-container{
+		display:grid;
+        grid-gap: 5px;
+		grid-template-areas:
+			'T T T'
+            'A1 C A2'
+            'A1 C A2'
+            'F E A2'
+			'F FO FO';
+		grid-gap:5px;
+		padding:10px;
+	}	
+    .move{
+        float:right;
+        max-width:500px;
+        padding-right:10%;
+        border-radius: 5px;
+    }
+}
+

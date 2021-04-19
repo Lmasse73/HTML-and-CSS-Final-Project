@@ -1,0 +1,104 @@
+h1{
+    font-size: 4vw;
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+h2{
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.75em;
+}
+
+p{
+    font-size: 1.5em;
+    text-indent: 20px;
+}
+
+blockquote{
+    font-size: 1.5em;
+}
+
+section{
+    max-width: auto;
+    padding: 1.5em;
+}
+
+
+
+.title{ grid-area:head; }
+.top{grid-area: tops;}
+.quote{ grid-area:quote; }
+.content{ grid-area:main; }
+.extra{ grid-area:drop; }
+.contact{ grid-area:foot; }
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+            'tops tops tops'
+			'main main main'
+			'drop drop drop'
+            'quote quote quote'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:4px;
+	} 
+    .move{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }   
+    header{
+        text-align: center;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width:481px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+            'tops tops tops'
+			'main main main'
+			'drop drop drop'
+            'quote quote quote'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:5px;
+	}
+    .move{
+        float:right;
+        max-width:300px;
+        padding-right:10%;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+	.grid-container{
+		display:grid;
+        grid-gap: 5px;
+		grid-template-areas:
+			'head head head head'
+			'main main tops drop'
+            'main main quote drop'
+			'foot foot foot foot';
+		grid-gap:5px;
+		padding:10px;
+	}	
+    .move{
+        float:right;
+        max-width:500px;
+        padding-right:10%;
+        border-radius: 5px;
+    }
+}

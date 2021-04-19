@@ -1,0 +1,101 @@
+h1, h2{
+    font-size: 4vw;
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+td img{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+h3{
+    text-align: center;
+    font-size: 3vw;
+}
+
+figcaption{
+    font-size: 2.5vw;
+}
+
+.boot{
+    width: 100%;
+}
+
+
+.title{ grid-area: T; }
+.area1{ grid-area: A1; }
+.area2{ grid-area:A2; }
+.other{ grid-area:C; }
+.blades{ grid-area:E; }
+.boot{ grid-area:B; }
+.contact{ grid-area:FO; }
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'T'
+			'A1'
+			'C'
+            'B'
+			'E'
+            'A2'
+            'FO';
+		grid-gap:0px;
+		padding:4px;
+	} 
+    .move{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }          
+ 
+    header{
+        text-align: center;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width:481px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'T T T'
+			'A1 A1 A1'
+            'B B C'
+			'E E A2'
+            'FO FO FO';
+		grid-gap:0px;
+		padding:5px;
+	}
+    .move{
+        float:right;
+        max-width:300px;
+        padding-right:10%;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+	.grid-container{
+		display:grid;
+        grid-gap: 5px;
+		grid-template-areas:
+			'T T T'
+			'A1 A1 A1'
+            'B B C'
+			'E E A2'
+            'FO FO FO';
+		grid-gap:5px;
+		padding:10px;
+	}	
+    .move{
+        float:right;
+        max-width:500px;
+        padding-right:10%;
+        border-radius: 5px;
+    }
+}

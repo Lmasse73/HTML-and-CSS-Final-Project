@@ -1,0 +1,178 @@
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 4vw;
+    color: #F1E09E;
+    text-align: center;
+}
+
+.dis{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dis1{
+    padding: 10px;
+}
+
+
+h2{
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2em;
+}
+
+h3{
+    color: #F1E09E;
+    text-shadow: 1px 1px 1px black;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+legend{
+    font-size: 1.5em;
+}
+
+summary{
+    font-size: 1em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+li{
+    font-size: 1em;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+}
+
+@keyframes growAndFadeInFontSize {
+	0% {
+    font-size: 0;
+    opacity: 0;
+	}
+	100% {
+    font-size: 1em;
+    opacity: 1;
+	}
+}
+details[open] {
+	animation-name: growAndFadeInFontSize;
+    animation-duration: 750ms;
+    width: 90%;
+}
+
+.details{
+    padding: 10px;
+}
+
+#coach{
+    max-width: auto;
+    border: 5px double black;
+    background-color: #8497B070;
+    padding: .5em;
+}
+
+#drops{
+    max-width: auto;
+    padding: .5em;
+}
+
+#quote{
+    max-width: auto;
+    padding: .5em;
+}
+
+#vids{
+    max-width: auto;
+    padding: .5em;
+}
+
+.title{ grid-area:head; }
+.menu{ grid-area:nav; }
+.content{ grid-area:main; }
+.extra{ grid-area:drop; }
+.box{ grid-area: box; }
+.foot{ grid-area:foot; }
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+			'main main main'
+			'drop drop drop'
+            'box box box'
+            'nav nav nav'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:4px;
+	} 
+    .move{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }   
+    header{
+        text-align: center;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width:481px) {
+	.grid-container{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+			'main main main'
+			'drop drop drop'
+            'box box box'
+            'nav nav nav'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:5px;
+	}
+    .move{
+        float:right;
+        max-width:300px;
+        padding-right:10%;
+    }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+	.grid-container{
+		display:grid;
+        grid-gap: 5px;
+		grid-template-areas:
+			'head head head'
+			'box main drop'
+            'box main nav'
+			'foot foot foot';
+		grid-gap:5px;
+		padding:10px;
+	}	
+    .move{
+        float:right;
+        max-width:500px;
+        padding-right:10%;
+        border-radius: 5px;
+    }
+}
+
